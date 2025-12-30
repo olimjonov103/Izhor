@@ -62,6 +62,17 @@
 </head>
 
 <body>
+   <script>
+  const password = "maftunaxon"; // Bu yerga o‘zing xohlagan parolni yoz
+  const userPass = prompt("Ismingizni kiriting:").toLowerCase();
+
+  if (userPass !== password.toLowerCase()) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>❌ Kirish taqiqlangan</h2>";
+  } else {
+    // Parol to‘g‘ri bo‘lsa, kontentni ko‘rsatish
+    document.getElementById("content").style.display = "block";
+  }
+   </script>
   <div class="text-box">
    <p><strong>Assalomu aleykum Maftunaxon.
    </strong>
