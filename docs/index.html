@@ -111,40 +111,6 @@
 </style>
 </head>
 <body>
-
-<!-- Parol oynasi -->
-<div id="password-overlay">
-  <div id="password-box">
-    <h2>🔐 Kirish</h2>
-    <input type="password" id="password-input" placeholder="Parolni kiriting">
-    <button onclick="checkPassword()">Ochish ❤️</button>
-    <p id="error-text"></p>
-  </div>
-</div>
-
-<!-- Sayt kontenti (avval yashirin) -->
-<div id="content" style="display:none;">
-
-  <div class="text-box">
-    <p><strong>Assalomu aleykum Maftunaxon.</strong></p>
-  </div>
-
-  <div class="text-box">
-   <!-- JS parol tekshirish -->
-<script>
-const PASSWORD = "maftunaxon"; // 🔑 Parolni shu yerga yozing
-
-function checkPassword() {
-  const input = document.getElementById("password-input").value.toLowerCase();
-  if(input === PASSWORD.toLowerCase()) {
-    document.getElementById("password-overlay").style.display = "none";
-    document.getElementById("content").style.display = "block";
-  } else {
-    document.getElementById("error-text").innerText = "❌ Parol noto‘g‘ri";
-  }
-}
-</script>
-<body>
    <div class="text-box">
    <p><strong>Assalomu aleykum Maftunaxon.
    </strong>
