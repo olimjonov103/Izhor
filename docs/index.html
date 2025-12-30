@@ -62,25 +62,46 @@
 </head>
 
 <body>
- <div id="password-overlay">
-  <div id="password-box">
+ <!-- Parol oynasi -->
+<div id="password-overlay" style="
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+">
+  <div id="password-box" style="
+      background: white; padding: 30px; width: 85%; max-width: 320px;
+      border-radius: 20px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  ">
     <h2>🔐 Kirish</h2>
-    <input type="password" id="password-input" placeholder="Ismingizni kiriting">
-    <button onclick="checkPassword()">Ochish ❤️</button>
-    <p id="error-text"></p>
+    <input type="password" id="password-input" placeholder="Ismingizni kiriting" style="
+        width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #ccc; font-size: 1rem; outline: none;
+    ">
+    <button onclick="checkPassword()" style="
+        margin-top: 15px; width: 100%; padding: 12px; border: none;
+        border-radius: 12px; background-color: #0195cc; color: white;
+        font-size: 1rem; font-weight: bold; cursor: pointer;
+    "> Kirish ❤️</button>
+    <p id="error-text" style="color: crimson; margin-top: 10px; font-size: 0.9rem;"></p>
   </div>
- </div>
-   <script>
-  const password = "maftunaxon"; // Bu yerga o‘zing xohlagan parolni yoz
-  const userPass = prompt("Ismingizni kiriting:").toLowerCase();
+</div>
 
-  if (userPass !== password.toLowerCase()) {
-    document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>❌ Kirish taqiqlangan</h2>";
-  } else {
-    // Parol to‘g‘ri bo‘lsa, kontentni ko‘rsatish
-    document.getElementById("content").style.display = "block";
+<!-- JS parol tekshirish -->
+<script>
+  const PASSWORD = "maftunaxon"; // 🔑 parolni shu yerga yoz
+
+  function checkPassword() {
+    const input = document.getElementById("password-input").value.toLowerCase();
+
+    if (input === PASSWORD.toLowerCase()) {
+      document.getElementById("password-overlay").style.display = "none";
+      document.getElementById("content").style.display = "block"; // sening content div id
+    } else {
+      document.getElementById("error-text").innerText = "❌ Parol noto‘g‘ri";
+    }
   }
-   </script>
+</script>
+
   <div class="text-box">
    <p><strong>Assalomu aleykum Maftunaxon.
    </strong>
