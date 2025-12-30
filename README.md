@@ -1,0 +1,2 @@
+# Izhor
+Izhorimni saytga joyladim.
