@@ -62,6 +62,14 @@
 </head>
 
 <body>
+ <div id="password-overlay">
+  <div id="password-box">
+    <h2>🔐 Kirish</h2>
+    <input type="password" id="password-input" placeholder="Ismingizni kiriting">
+    <button onclick="checkPassword()">Ochish ❤️</button>
+    <p id="error-text"></p>
+  </div>
+ </div>
    <script>
   const password = "maftunaxon"; // Bu yerga o‘zing xohlagan parolni yoz
   const userPass = prompt("Ismingizni kiriting:").toLowerCase();
