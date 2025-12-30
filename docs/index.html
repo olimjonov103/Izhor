@@ -62,18 +62,21 @@
 </head>
 
 <body>
- <!-- Parol oynasi -->
+<!-- Parol oynasi -->
 <div id="password-overlay" style="
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex; align-items: center; justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8); /* fon qorong‘i */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 9999;
 ">
   <div id="password-box" style="
       background: white; padding: 30px; width: 85%; max-width: 320px;
       border-radius: 20px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   ">
-    <h2>🔐 Kirish</h2>
+    <h2>🔐 Faqat siz ocha olasiz</h2>
     <input type="password" id="password-input" placeholder="Ismingizni kiriting" style="
         width: 100%; padding: 12px; border-radius: 12px; border: 1px solid #ccc; font-size: 1rem; outline: none;
     ">
@@ -81,27 +84,42 @@
         margin-top: 15px; width: 100%; padding: 12px; border: none;
         border-radius: 12px; background-color: #0195cc; color: white;
         font-size: 1rem; font-weight: bold; cursor: pointer;
-    "> Kirish ❤️</button>
+    ">Ochish ❤️</button>
     <p id="error-text" style="color: crimson; margin-top: 10px; font-size: 0.9rem;"></p>
   </div>
 </div>
 
+<!-- Asosiy sayt kontenti (avval yashirin) -->
+<div id="content" style="display:none;">
+  <!-- Shu yerga o‘z sayt kodlaringni joylashtir -->
+  <h1>Siz uchun ❤️</h1>
+
+  <a href="https://t.me/olimjonov103" target="_blank" style="
+     text-decoration: none; background-color: #0195cc; color: white; padding: 16px 165px; 
+     border-radius: 12px; font-weight: bold; display: inline-block; margin-bottom: 15px;">
+    Balki...
+  </a>
+
+  <div class="audio-box" style="
+      background-color: #0195cc; color: white; padding: 12px 15px;
+      border-radius: 12px; font-weight: bold; display: inline-block; margin-top: 15px;
+  ">
+    <audio controls autoplay loop>
+      <source src="Majnun - Shohruhxon.m4a" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <a href="Majnun - Shohruhxon.m4a" download style="
+      display: block; width: fit-content; margin: 10px auto; background-color: #0177aa;
+      color: white; padding: 10px 22px; border-radius: 10px; text-decoration: none; font-size: 1.1rem;
+  ">
+    ❤️‍🩹 Qo‘shiqni yuklab olish
+  </a>
+</div>
+
 <!-- JS parol tekshirish -->
 <script>
-  const PASSWORD = "maftunaxon"; // 🔑 parolni shu yerga yoz
-
-  function checkPassword() {
-    const input = document.getElementById("password-input").value.toLowerCase();
-
-    if (input === PASSWORD.toLowerCase()) {
-      document.getElementById("password-overlay").style.display = "none";
-      document.getElementById("content").style.display = "block"; // sening content div id
-    } else {
-      document.getElementById("error-text").innerText = "❌ Parol noto‘g‘ri";
-    }
-  }
-</script>
-
+  const
   <div class="text-box">
    <p><strong>Assalomu aleykum Maftunaxon.
    </strong>
