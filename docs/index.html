@@ -64,6 +64,11 @@
     if (input.toLowerCase() === REAL_PASSWORD.toLowerCase()) {
       document.getElementById("passwordOverlay").style.display = "none";
       document.getElementById("siteContent").style.display = "block";
+      // 📊 PAROL TO‘G‘RI KIRITILDI — EVENT
+      gtag('event', 'password_success', {
+        event_category: 'Security',
+        event_label: 'Correct password entered'
+      });
     } else {
       error.textContent = "Ism noto‘g‘ri";
     }
