@@ -2,6 +2,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+                        <style>
+  #passwordOverlay {
+    position: fixed;
+    inset: 0;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .password-box {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    text-align: center;
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .password-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+
+  .password-box button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: #0195cc;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .password-error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  #siteContent {
+    display: none;
+  }
+</style>
+                       <script>
+  const REAL_PASSWORD = "Maftunaxon"; // 🔐 PAROLNI SHU YERDA O‘ZGARTIR
+
+  function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+    const error = document.getElementById("passwordError");
+
+    if (input.toLowerCase() === REAL_PASSWORD.toLowerCase()) {
+      document.getElementById("passwordOverlay").style.display = "none";
+      document.getElementById("siteContent").style.display = "block";
+    } else {
+      error.textContent = "Ism noto‘g‘ri";
+    }
+  }
+</script>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Unga aytmoqchi bo'lgan gaplarim
@@ -70,8 +137,15 @@
 
   gtag('config', 'G-246CFPZF31');
 </script>
-</head>
 <body>
+                       <div id="passwordOverlay">
+  <div class="password-box">
+    <h3>Ismingizni kiriting</h3>
+    <input type="password" id="passwordInput" placeholder="Ism">
+    <button onclick="checkPassword()">Kirish</button>
+    <div id="passwordError" class="password-error"></div>
+  </div>
+</div>
    <div class="text-box">
    <p><strong>Assalomu aleykum.
    </strong>
@@ -196,7 +270,7 @@ Buni doimo his qilib turishingizni xohlayman.
 -->
 </h></p> 
   
-<!-- 
+
        <p>
        <h1>  </h1> 
        </p>
@@ -212,9 +286,9 @@ Buni doimo his qilib turishingizni xohlayman.
           margin-bottom: 15px;">
           Balki...
           </a>
--->
+
        
-<!--
+
           <div class="audio-box"
            style="background-color: #092cc; 
           color: white; 
@@ -237,6 +311,6 @@ Buni doimo his qilib turishingizni xohlayman.
           font-size: 1.1rem;">
           ❤️‍🩹 Qo‘shiqni yuklab olish
           </a> 
--->
+
 </body>
   </html>
