@@ -3,6 +3,24 @@
 <html>
 <head>
                         <style>
+                          /* 🔐 PAROL INPUT — DARK MODE */
+body.dark-mode input[type="password"],
+body.dark-mode input[type="text"] {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+/* Placeholder rangi */
+body.dark-mode input::placeholder {
+  color: #aaaaaa;
+}
+
+/* Fokus bo‘lganda (bosilganda) */
+body.dark-mode input:focus {
+  outline: none;
+  border-color: #0195cc;
+}
   #passwordOverlay {
     position: fixed;
     inset: 0;
