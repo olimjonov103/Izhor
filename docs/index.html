@@ -114,24 +114,57 @@ body.dark-mode input:focus {
   }
               </style>
                        <script>
-  const REAL_PASSWORD = "Maftunaxon"; // 🔐 PAROLNI SHU YERDA O‘ZGARTIR
+  const REAL_PASSWORD = "Maftunaxon";
 
-  function checkPassword() {
+  let wrongAttempts = 0;
+
+  function getDeviceType() {
+    return /Mobi|Android/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+  }
+
+  function getBrowser() {
+    const ua = navigator.userAgent;
+    if (ua.includes("Telegram")) return "Telegram";
+    if (ua.includes("Chrome")) return "Chrome";
+    if (ua.includes("Firefox")) return "Firefox";
+    if (ua.includes("Safari")) return "Safari";
+    if (ua.includes("Edge")) return "Edge";
+    return "Unknown";
+                         }
+                         function checkPassword() {
     const input = document.getElementById("passwordInput").value;
     const error = document.getElementById("passwordError");
 
+    const device = getDeviceType();
+    const browser = getBrowser();
+    const time = new Date().toLocaleString();
+
     if (input.toLowerCase() === REAL_PASSWORD.toLowerCase()) {
+
       document.getElementById("passwordOverlay").style.display = "none";
       document.getElementById("siteContent").style.display = "block";
-      // 📊 PAROL TO‘G‘RI KIRITILDI — EVENT
+
+      // ✅ TO‘G‘RI PAROL EVENT
       gtag('event', 'password_success', {
-        event_category: 'Security',
-        event_label: 'Correct password entered'
+        device_type: device,
+        browser_name: browser,
+        success_time: time
       });
+
     } else {
-      error.textContent = "Ism noto‘g‘ri";
+      wrongAttempts++;
+      error.textContent = "Parol noto‘g‘ri";
+
+      // ❌ NOTO‘G‘RI PAROL EVENT
+      gtag('event', 'password_failed', {
+        device_type: device,
+        browser_name: browser,
+        failed_attempts: wrongAttempts,
+        fail_time: time
+      });
     }
   }
+</script>
 </script>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
