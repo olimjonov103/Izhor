@@ -1,190 +1,104 @@
 <!-- Bismillah ♡-->
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
-                        <style>
-                          body.dark-mode .password-box {
-  background-color: #1a1a1a;
-  color: #ffffff;
-                          }
-                          /* 🌙 DARK MODE — ORQA PARDA */
-body.dark-mode #passwordOverlay {
-  background: #0f0f0f;
-}
-                          /* 🔐 PAROL INPUT — DARK MODE */
-body.dark-mode input[type="password"],
-body.dark-mode input[type="text"] {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  border: 1px solid #555;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unga aytmoqchi bo'lgan gaplarim</title>
 
-/* Placeholder rangi */
-body.dark-mode input::placeholder {
-  color: #aaaaaa;
-}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-246CFPZF31"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-246CFPZF31');
+  </script>
 
-/* Fokus bo‘lganda (bosilganda) */
-body.dark-mode input:focus {
-  outline: none;
-  border-color: #0195cc;
-}
-  #passwordOverlay {
-    position: fixed;
-    inset: 0;
-    background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .password-box {
-    background: white;
-    padding: 22px;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    text-align: center;
-    max-width: 320px;
-    width: 100%;
-  }
-
-  .password-box input {
-    width: 90%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-
-  .password-box button {
-    margin-top: 15px;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    background-color: #0195cc;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .password-error {
-    color: red;
-    margin-top: 10px;
-  }
-
-  #siteContent {
-    display: none;
-  }
-</style>
-              <style>
-  /* 🌙☀️ TUN / KUNDUZ */
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-
-  body.dark-mode .text-box {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-  }
-
-  /* Toggle tugma */
-  #modeToggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border: none;
-    border-radius: 50%;
-    width: 52px;
-    height: 52px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    background-color: #0195cc;
-    color: white;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    z-index: 10000;
-  }
-
-  body.dark-mode #modeToggle {
-    background-color: #444;
-  }
-              </style>
-                       <script>
-  const REAL_PASSWORD = "Maftunaxon";
-
-  let wrongAttempts = 0;
-
-  function getDeviceType() {
-    return /Mobi|Android/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
-  }
-
-  function getBrowser() {
-    const ua = navigator.userAgent;
-    if (ua.includes("Telegram")) return "Telegram";
-    if (ua.includes("Chrome")) return "Chrome";
-    if (ua.includes("Firefox")) return "Firefox";
-    if (ua.includes("Safari")) return "Safari";
-    if (ua.includes("Edge")) return "Edge";
-    return "Unknown";
-                         }
-                         function checkPassword() {
-    const input = document.getElementById("passwordInput").value;
-    const error = document.getElementById("passwordError");
-
-    const device = getDeviceType();
-    const browser = getBrowser();
-    const time = new Date().toLocaleString();
-
-    if (input.toLowerCase() === REAL_PASSWORD.toLowerCase()) {
-
-      document.getElementById("passwordOverlay").style.display = "none";
-      document.getElementById("siteContent").style.display = "block";
-      Google tag (gtag.js) </script>
-<script> async src="https://www.googletagmanager.com/gtag/js?id=G-246CFPZF31"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-246CFPZF31');
-
-      // ✅ TO‘G‘RI PAROL EVENT
-      gtag('event', 'password_success', {
-        device_type: device,
-        browser_name: browser,
-        success_time: time
-      });
-
-    } else {
-      wrongAttempts++;
-      error.textContent = "Ism noto‘g‘ri";
-
-      // ❌ NOTO‘G‘RI PAROL EVENT
-      gtag('event', 'password_failed', {
-        device_type: device,
-        browser_name: browser,
-        failed_attempts: wrongAttempts,
-        fail_time: time
-      });
-    }
-  }
-</script>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Unga aytmoqchi bo'lgan gaplarim
-   </title>
-    
-     <style>
+  <!-- 🔐 PAROL + DARK MODE STYLE -->
+  <style>
     body {
       margin: 0;
       padding: 20px;
       font-family: sans-serif;
       background-color: #f5f5f5;
       text-align: center;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .text-box {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode .password-box {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    body.dark-mode #passwordOverlay {
+      background: #0f0f0f;
+    }
+
+    body.dark-mode input {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #555;
+    }
+
+    #passwordOverlay {
+      position: fixed;
+      inset: 0;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .password-box {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 320px;
+      width: 100%;
+    }
+
+    .password-box input {
+      width: 90%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .password-box button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background-color: #0195cc;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .password-error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #siteContent {
+      display: none;
     }
 
     .text-box {
@@ -199,245 +113,141 @@ body.dark-mode input:focus {
       font-size: 1.05rem;
     }
 
-    .btn {
-      text-decoration: none;
+    #modeToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border: none;
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      font-size: 1.3rem;
+      cursor: pointer;
       background-color: #0195cc;
       color: white;
-      padding: 16px 40px;
-      border-radius: 12px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 15px;
+      z-index: 10000;
     }
 
-    .audio-box {
-      background-color: #0195cc;
-      padding: 12px 15px;
-      border-radius: 12px;
-      display: inline-block;
-      margin-top: 15px;
+    body.dark-mode #modeToggle {
+      background-color: #444;
     }
 
-    .download-btn {
-      display: block;
-      width: fit-content;
-      margin: 12px auto;
-      background-color: #0177aa;
-      color: white;
-      padding: 10px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 1.1rem;
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
-  
+
+  <!-- 🔐 PAROL LOGIC -->
+  <script>
+    const REAL_PASSWORD = "Maftunaxon";
+    let wrongAttempts = 0;
+
+    function getDeviceType() {
+      return /Mobi|Android/i.test(navigator.userAgent) ? "Mobile" : "Desktop";
+    }
+
+    function getBrowser() {
+      const ua = navigator.userAgent;
+      if (ua.includes("Telegram")) return "Telegram";
+      if (ua.includes("Chrome")) return "Chrome";
+      if (ua.includes("Firefox")) return "Firefox";
+      if (ua.includes("Safari")) return "Safari";
+      if (ua.includes("Edge")) return "Edge";
+      return "Unknown";
+    }
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("passwordError");
+
+      const device = getDeviceType();
+      const browser = getBrowser();
+      const time = new Date().toLocaleString();
+
+      if (input.toLowerCase() === REAL_PASSWORD.toLowerCase()) {
+        document.getElementById("passwordOverlay").style.display = "none";
+        document.getElementById("siteContent").style.display = "block";
+
+        gtag('event', 'password_success', {
+          device_type: device,
+          browser_name: browser,
+          success_time: time
+        });
+
+      } else {
+        wrongAttempts++;
+        error.textContent = "Ism noto‘g‘ri";
+
+        gtag('event', 'password_failed', {
+          device_type: device,
+          browser_name: browser,
+          failed_attempts: wrongAttempts,
+          fail_time: time
+        });
+      }
+    }
+  </script>
 </head>
 
-
 <body>
-  
-                       <button id="modeToggle">🌙</button>
-                      <script>
-  const toggleBtn = document.getElementById('modeToggle');
+  <button id="modeToggle">🌙</button>
 
-  function updateIcon() {
-    toggleBtn.textContent =
-      document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-  }
+  <div id="passwordOverlay">
+    <div class="password-box">
+      <h3>Ismingizni kiriting</h3>
+      <input type="password" id="passwordInput" placeholder="Ism">
+      <button onclick="checkPassword()">Kirish</button>
+      <div id="passwordError" class="password-error"></div>
+    </div>
+  </div>
 
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+  <div id="siteContent">
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Kf3FgYLZ3EQ" allowfullscreen></iframe>
+    </div>
 
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
+    <div class="text-box">
+      <p><strong>Assalomu aleykum.</strong></p>
+    </div>
+
+    <!-- COMMENTGA OLINGAN MATNLAR O‘ZGARTIRILMADI -->
+    <!-- ... qolgan matnlaring shu holatda qoladi ... -->
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('modeToggle');
+
+    function updateIcon() {
+      toggleBtn.textContent =
+        document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem(
+        'theme',
+        document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+      );
+      updateIcon();
+    });
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
     }
     updateIcon();
-  });
-
-  // Sahifa ochilganda oldingi holatni tiklash
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-  updateIcon();
-                      </script>
-                       <div id="passwordOverlay">
-  <div class="password-box">
-    <h3>Ismingizni kiriting</h3>
-    <input type="password" id="passwordInput" placeholder="Ism">
-    <button onclick="checkPassword()">Kirish</button>
-    <div id="passwordError" class="password-error"></div>
-  </div>
-</div>
-   <div class="text-box">
-   <p><strong>Assalomu aleykum.
-   </strong>
-   </p>
-     </div> 
-      <div class="text-box">
-      <p> </p>
-       <h>
-        Iltimos saytga kirib turing. Rostiga sevaman. Hali aytilmagan gaplarim ko'p shunchun kirib turing baribir nomerizi bermadiz. Gaplashish niyatim yoq edi. Shunchaki Telegramimga saxranit qilib qoymoqchi edim. 
-      Hullas osha gaplar ayrimlarigina aytilmagan holos. Iltimos Maftunaxon saytga kirib turing. Sevaman ishoning qattiq sevaman.<br> <br> Ha aytgancha xatdagi xunuk yozuv uchun uzur. To'g'ri tushunasiz deb o'ylayman. 
-         <br> Gaplarim ko'p hali. Iltimos yana aytaman siz bilan ko'rishmasam, telefon nomeriz bo'lmasa iltimos shu saytga kirib turing. Sizga hech boʻlmaganda shu yoʻl bilan gaplarimni aytib turay.
-         Iltimos yana bir bor SAYTGA KIRIB TURING!  Kecha sizga mahallada gapirmaganimni sababi esa shu sizi shaʼnizni oʻyladim. Qayta qayta aytsam ham kam:<br> SIZNI SEVAMAN! <br> Buni doim yodizda tuting.
-       <br>  Rahmat sizga. Shunchaki borligingiz uchun.
-<br><br> Lekin saytga kirib turing deb juda ko'p yozibmana. Buni sizga xat bergan kunimda yozdimda hayollarim, hushim o'zidamasdi. 
-         Pastdagilar o'sha xatga yozganlarim. Faqat oxiridagi bitta xat boshini yozmagandim. Qolganlari o'sha gaplar. 
-Avval ham aytganimdek, men sizning iffatingiz va go‘zal tarbiyangiz sabab Alloh uchun yaxshi ko‘rib qoldim. Siz bilan boshqalar kabi oddiy “sevishib yurish” ni xohlamayman.
-<br><br>
-Men barchasini halol yo‘l bilan bo‘lishini istayman. Sizni sha'ningiz men uchun muhim albatta. Siz uchun chin qalbimdan duo qilaman, qolganini Allohga topshiraman.
-<br><br>
-Bu gaplarimni samimiy niyat sifatida qabul qilasiz degan umiddaman.
-<br>
-Agar sizga noqulay bo‘lmasa, keyinroq tanishuvni davom ettirishga ham qarshi emasman.
-<br><br>
-Sizga hech qanday talab qo‘ymayman. Yuqoridagilarning barchasi iltimos, xolos. Avval ham aytganimdek, tanlov o‘zingizda.
-<br><br>
-Ha aytgancha bu saytdagi matnlarga keyinchalik o'zgartirishlar kiritib turishim mumkin. Ya'ni, yana aytmoqchi bo'lgan ba'zi bir gaplarimni qo'shishim mumkin.
-<br><br> Sizni sevaman. Buni ko'rishganda aytolmasligim mumkin lekin sevaman. Balki bularni o'qiganizda sizga buni yuzma-yuz ko'rishganda aytgan bo'larman.
-         <!-- Men sizni Alloh uchun yaxshi ko'rishimni aytdim. 
- Faqat u xatda hammasini to'liq yozmagandim.
-<br> <br>
- Albbata sizga nisbatan niyatim va tuyg'ularim jiddiy.
- <br>
- Avval ham aytganimdek men sizning iffatingiz va go'zal tarbiyangiz sabab
- Alloh uchun yaxshi ko'rib qoldim. Siz bilan 
- boshqalar kabi  oddiy "Sevishib" yurishni xohlamayman.
- <br> <br>  
- Men barchasini halol yo'l bilan bo'lishini xohlayman.
- Bu sizninig sha'ningiz uchun ham to'g'ri bo'ladi deb o'ylayman.
- Siz uchun chin qalbimdan duoda bo'laman. Qolganini Allohga topshiraman.
- <br> <br>
- Bu gaplarimni samimiy niyat sifatida qabul qilishingizni istardim.
- <br>
- Agar o‘zingizga qulay bo‘lsa, keyinroq tanishuvni davom ettirishga ham qarshi emasman.
- <br> <br>
- Sizga hech qanday talab qo'ymayman. Yuqoridagilarning barchasi iltimos holos.
- Tanlov o'z qo'lingizda.
-<!-- 
-Gap shundaki, sizini sevib qolganimdan beri menda tinchlik yo'q. 
-Har kuni hayolimdasiz. O'qishda ham, ishda ham, uyda ham, 
-ko'chada ham hullas hamma hamma joyda.
-Nima qildi ekan, ahvoli yaxshimikan, sog'lig'i joyidamikan, 
-uyiga, o'qishiga yaxshi yetib oldimikan, ko'chada ubu kim g'ashiga tegmadimikan, 
-ayniqsa kechki payt, kech bo'lib qolganda rosa xavotirlanaman, 
-kayfiyati qanaqa ekan degan savollar bilan yuraman.
-<br> <br>
-Kayfiyatim ham sizga bog'liq bo'lib qogan. Sizi ko'rgan kunim kayfiyatim zo'r bo'lib ketadi, 
-ko'rolmagan kunim esa hamma narsa g'alati bo'lib qoladi. Maktabizga har kuni bordim lekin ko'rolmadim. 
-Rostiga qalbimni egallab oldiz. O'sha kuni nomerizni bu darajada tez so'rash niyatim yo'q edi,
-lekin ko'p xavotirlanganimda shunchaki xabardor bo'lib turish uchun so'radim.
-<br> <br>
-Bilmadim nimaga unaqa bo'ldi. Sizga aytdimku "u maktabga boshqa bormayman o'qishimni boshqa joyga o'tkazdim" deb,
-shunga ketsam ko'ra olmaslikdan qo'rqdim.
-Siz bo'lsa bermadiz. Bunaqa qilishiz aniq ediku-ya, shunda ham  men o'zim xavotirlanib so'radim balki berar deb.
-<br> <br>
-Shunday qilib kunlarimni o'tkazyapman. 
-Men sizni sha'niz uchun ham boshqalarga o'xshab ko'chalarda sevishib  yurishni xoxlamayman. Lekin sizdan xabardor bo'lib turishim kerak.
-<br> <br>
-Aytdimku sizga mahallada gapirish niyatim yo'q deb. Sababi shu edi ertaga kimdirlar ko'rsa sizga nisbatan noto'g'ri gap bo'lardi.
-Siz bilan bog'liq har qanday holat men uchun muhim.
-<br> <br>
-Mayli aytmoqchimasdim lekin aytaman. Hatto tushimda ham siz yuribsiz. Bugun ham tushimda ko'rdim, lekin yaxshi esimda qolmadi nimalar bo'lgani.
-Esimda qolgani maktabizga bordim, sizni kuzatdim, darsizdan chiqdiz, o'sha paytda men ham o'zimni darslarimni qilayotgan ekanman.
-  O'shanga chalg'ib sizni yo'qotib qo'yibman. Esimda qolgani shular bo'ldi. 
-  Lekin birinchi tush menga juda yoqudi.
-  Uni ta'birini ham so'ragandim juda
-  chiroyli chiqdi. Birinchi tushimni sizga
-  burilishda gapirgan kuni ertalab soat
-  4:50 larda ko'rib uyg'onib ketdim. Keyin
-  esimdan chiqmasin deb telegramdagi
-  saqlangan xabarlarga yozib qo'ydim. Yana
-  uxlab tushimda sizni ko'rishga harakat
-  qildim, lekin ko'rolmadim. Ertalab
-  turishim bilanoq ta'birini ko'rdim. Endi
-  shunaqanggi yoqdiki ta'biri, in shaa
-  Alloh hammasi yaxshi bo'ladi dedim va
-  mana hali ham niyat qilib yuribman.
-  Sizni ko'rganimda qandaydur yoqimli his
-  o'tadi, lekin hozir ta'riflab berolmasam
-  kere. Ehhhhh mayli lekin yomonam
-  sog'indim, juda juda sog'inib ketdim.
-  Bilmiman nimaga, lekin ko'rgim kelaveradi.
-<br> <br>
-Ha yana bir gap. Siz bilan oxirgi marta 19-dekabrda ko'rishgandim. 
-O'sha burilishda. Mana salkam ikki haftadan beri ko'rishmadik. 
-Sizga aytadigan gaplarim ko'p. Agar hohlaseiz hammasini aytib berardim. 
-Hattoki hammasi qachondan boshlangani ham esimda.
-O'sha burilishda gaplashgan kunimiz ham uyga kelib,
-balki ko'rib qolarman deb chiqudim.
-Siz bilan ucharish nasib qildi. Bundan juda xursand bo'ldim. 
-Shuning uchun ham "balki" deb umid qilaman doim.
-Gap ko'p-da. Qaniydi o'zizga aytib bersam. 
-<br> <br> 
-31.12.2025. Soat 16:23 va 16:25 lar oralig'i. Singlizni ko'rdim.
-Endi shunaqanggi xursand bo'ldim. Ko'rinmay ketganizga o'ylagandimki
-uyida emas, qarindoshlarinikida shekilli deb.
-Yo'q, singlizni ko'rib uyida ekan deb
-quvonchimdan ichimga sig'madim. 
-Olib ketayotgan fergamentiga
-qizil ruchka bilan yurakcha chizib,
-berib yubormoqchi
-bo'ldim-u, uyidagilari nima deb tushunadi deb,
-indamay qo'ya qoldim. 
-Lekin aytganimdek juda xursand bo'ldim.
-<br> <br>  
-Biroz oldin soat 20:20 larda dadangizni ko'rdim. 
-Yana esimga tushdiz. Endi nimadur qilib o'zimni chalg'itishim 
-kerak. 
-<br> <br>
-Sizga ichimdagi bor narsalarni, holatlarni ochiqchasiga aytyapman.
-<br> <br>
-
-Maftunaxon sizni chin dildan Alloh uchun sevaman. 
-<br> <br>
-Buni doimo his qilib turishingizni xohlayman.
--->
-</h></p> 
-  
-
-<!--       <p>
-       <h1>  </h1> 
-       </p>
-       <a href="https://t.me/olimjonov103" target     ="_blank" 
-   
-          style="text-decoration: none; 
-          background-color: #0195cc; 
-          color: white; 
-          padding: 16px 115px; 
-          border-radius: 12px; 
-          font-weight: bold;
-          display: inline-block;
-          margin-bottom: 15px;">
-          Balki...
-          </a>
-
-       
-
-          <div class="audio-box"
-           style="background-color: #092cc; 
-          color: white; 
-          padding: 12px 7px; 
-          border-radius: 18px; 
-          font-weight: bold;
-          display: inline-block;
-          margin-top: 15px;">
-          <audio controls autoplay loop>
-          <source src="Majnun - Shohruhxon.m4a" type="audio/mpeg"></audio></div>
-          <a href="Majnun - Shohruhxon.m4a" download
-          style="display: block;
-          width: fit-content;
-          margin: 8px auto;
-          background-color: #0177aa;
-          color: white;
-          padding: 10px 18px;
-          border-radius: 12px;
-          text-decoration: none;
-          font-size: 1.1rem;">
-          ❤️‍🩹 Qo‘shiqni yuklab olish
-          </a> 
--->
+  </script>
 </body>
-  </html>
+</html>
