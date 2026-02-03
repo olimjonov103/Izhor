@@ -347,10 +347,13 @@ Buni doimo his qilib turishingizni xohlayman.
 </h></p> </div>
   
 
-<!--       <p>
+      <p>
        <h1>  </h1> 
        </p>
-       <a href="https://t.me/olimjonov103" target     ="_blank" 
+       <a href="https://t.me/olimjonov103" target     ="_blank"
+
+  id="telegramBtn"
+  onclick="trackTelegramClick()"
    
           style="text-decoration: none; 
           background-color: #0195cc; 
@@ -365,6 +368,7 @@ Buni doimo his qilib turishingizni xohlayman.
 
        
 
+         <!--
           <div class="audio-box"
            style="background-color: #092cc; 
           color: white; 
@@ -390,6 +394,22 @@ Buni doimo his qilib turishingizni xohlayman.
 -->
   </div>
 
+
+  
+              <script>
+              function trackTelegramClick() {
+                  gtag('event', 'telegram_click', {
+              link_url: 'https://t.me/olimjonov103',
+            page_location: window.location.href
+              });
+               }
+               </script>
+
+
+
+
+
+  
   <script>
     const toggleBtn = document.getElementById('modeToggle');
 
