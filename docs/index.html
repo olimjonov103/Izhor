@@ -205,23 +205,6 @@
 
 <body>
 
-       <input
-        type="password"
-        id="passwordInput"
-       placeholder="Ismingizni kiriting"
-       />
-       <script>
-      const passwordInput = document.getElementById("passwordInput");
-
-      passwordInput.addEventListener("focus", () => {
-      gtag("event", "password_placeholder_focus", {
-      event_category: "auth",
-      event_label: "password_input"
-       });
-       });
-      </script>
-
-  
   <button id="modeToggle">🌙</button>
 
   <div id="passwordOverlay">
